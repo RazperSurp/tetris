@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TETRIS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header> 
+        <h1> ! TETRIS ! </h1>
+        <button id="btn-start"> START </button>
+    </header>
+    <main>
+        <table id="game-field">
+            <tr data-addr="0">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="1">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="2">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="3">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="4">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="5">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="6">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="7">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="8">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="9">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="10">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="11">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="12">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="13">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="14">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="15">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="16">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="17">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="18">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="19">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="20">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="21">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="22">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="23">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+            <tr data-addr="24">
+                <td data-addr="0"> </td>
+                <td data-addr="1"> </td>
+                <td data-addr="2"> </td>
+                <td data-addr="3"> </td>
+                <td data-addr="4"> </td>
+                <td data-addr="5"> </td>
+                <td data-addr="6"> </td>
+                <td data-addr="7"> </td>
+                <td data-addr="8"> </td>
+                <td data-addr="9"> </td>
+                <td data-addr="10"> </td>
+                <td data-addr="11"> </td>
+            </tr>
+        </table>
+        <div id="controls">
+            <button id="btn-left"> <img src="/assets/arrow-left.svg"> </button>
+            <button id="btn-up"> <img src="/assets/arrow-up.svg"> </button>
+            <button id="btn-down"> <img src="/assets/arrow-down.svg"> </button>
+            <button id="btn-right"> <img src="/assets/arrow-right.svg"> </button>
+        </div>
+    </main>
+    <script type="module" src="main.mjs"> </script>
+</body>
+</html>

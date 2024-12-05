@@ -1,0 +1,13 @@
+#game-field {
+    border-collapse: collapse;
+}
+
+td {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+td.tetramino {
+    background-color: black;
+}
